@@ -14,14 +14,14 @@ GROQ_API_KEY: str = os.getenv("GROQ_API_KEY", "")
 GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
 
 # Config
-DEBUG_LLM: bool = os.getenv("DEBUG_LLM", "false").lower() == "true"
+DEBUG_LLM: bool = False
 
 # Server
 PORT: int = int(os.getenv("PORT", "8080"))
 HOST: str = os.getenv("HOST", "0.0.0.0")
 
 # Team metadata
-TEAM_NAME: str = "MagicPin Assignment"
+TEAM_NAME: str = "Team Caya"
 TEAM_MEMBERS: list[str] = ["Aarab Nishchal"]
 MODEL_DISPLAY: str = f"groq/{LLM_MODEL}"
 APPROACH: str = "4-context deterministic composer with per-trigger-kind prompt dispatch + pattern-matched reply handler"
